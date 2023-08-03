@@ -1,10 +1,8 @@
 function solution(arr) {
-    let num = 0;
     let len = arr.length;
+    let num = 0;
     
-    while(Math.pow(2, num) < arr.length) num++;
-    
-    console.log((Math.pow(2, num) - arr.length)); // 출력 : 2
+    while(Math.pow(2, num) < len) num++;
 
     for(let i = 0; i < (Math.pow(2, num) - len); i++) {
         arr.push(0);
