@@ -1,11 +1,11 @@
-function solution(arr) {  
-    let answer = [];
+function solution(arr) {
+    let len = arr.length;
     
-    for(let i = 0; i < arr.length; i++) {
-        for(let j = 0; j < arr.length; j++) {
-            answer.push(arr[i][j] === arr[j][i]);
+    for(let i = 0; i < len; i++) {
+        for(let j = 0; j < len; j++) {
+            if(arr[i][j] !== arr[j][i]) return 0;
         }
     }
     
-    return answer.every(Boolean) ? 1 : 0;
+    return 1;
 }
