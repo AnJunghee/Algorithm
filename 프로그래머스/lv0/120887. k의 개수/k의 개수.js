@@ -1,9 +1,9 @@
 function solution(i, j, k) {
-    let count = 0;
+    let str = '';
     
     for(i; i <= j; i++) {
-        [...i.toString()].forEach((v) => v === k.toString() && count++);
+        str += i;
     }
         
-    return count;
+    return str.split(k).length - 1;
 }
