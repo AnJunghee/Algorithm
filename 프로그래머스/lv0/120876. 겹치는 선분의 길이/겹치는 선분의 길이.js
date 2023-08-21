@@ -7,6 +7,6 @@ function solution(lines) {
         }
     });
     
-    const filteredArray = arr.sort().filter((v) => arr.indexOf(v) !== arr.lastIndexOf(v));
+    const filteredArray = arr.filter((v) => arr.indexOf(v) !== arr.lastIndexOf(v));
     return [...new Set(filteredArray)].length;
 }
