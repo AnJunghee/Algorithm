@@ -1,5 +1,7 @@
 function solution(lines) {
-    let arr = [];
+    let arr = []; 
+    const cnt = new Map();
+    const set = new Set();
     
     lines.forEach(([x, y]) => {
         for(let i = x; i < y; i++) {
@@ -7,6 +9,8 @@ function solution(lines) {
         }
     });
     
-    const filteredArray = arr.filter((v) => arr.indexOf(v) !== arr.lastIndexOf(v));
-    return [...new Set(filteredArray)].length;
+    arr.forEach((v) => cnt.set(v, (cnt.get(v) || 0) + 1));
+    arr.filter((v) => cnt.get(v) !== 1).forEach((v) => set.add(v));
+    
+    return set.size;
 }
