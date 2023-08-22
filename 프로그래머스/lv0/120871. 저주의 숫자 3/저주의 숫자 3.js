@@ -8,5 +8,5 @@ function solution(n) {
         count++;
     }
     
-    return count - 1; // 마지막에 한 번 더 증가시키므로 1을 빼줍니다.
+    return count - 1; // 마지막에 한 번 더 증가시키므로 1을 빼줌
 }
