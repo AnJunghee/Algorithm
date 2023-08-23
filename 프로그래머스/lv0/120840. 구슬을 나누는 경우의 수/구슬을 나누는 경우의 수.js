@@ -1,9 +1,12 @@
 function solution(balls, share) {
-    let n = 1, m = 1, nm = 1;
+    const factorial = (n) => {
+        if(n === 0 || n === 1) return 1;
+        return n * factorial(n - 1);
+    }
     
-    for(let i = 1; i <= balls; i++) n *= i;
-    for(let i = 1; i <= share; i++) m *= i;
-    for(let i = 1; i <= balls - share; i++) nm *= i;
+    const n = factorial(balls);
+    const m = factorial(share);
+    const nm = factorial(balls - share);
     
     return Math.round(n / (nm * m));
 }
