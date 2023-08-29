@@ -8,5 +8,6 @@ function solution(num) {
         if(num === 1) return count;
         count++;
     }
+    
     return -1;
 }
