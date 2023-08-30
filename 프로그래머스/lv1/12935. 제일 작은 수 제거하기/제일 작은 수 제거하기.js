@@ -1,4 +1,4 @@
 function solution(arr) {
-    const filteredArray = arr.filter((v) => v !== Math.min(...arr));
-    return filteredArray.length ? filteredArray : [-1];
+    arr.splice(arr.indexOf(Math.min(...arr)), 1);
+    return arr.length ? arr : [-1];
 }
