@@ -1,5 +1,3 @@
 function solution(a, b) {
-    let answer = 0;
-    a.forEach((_, i) => answer += (a[i] * b[i]));
-    return answer;
+    return a.reduce((acc, curr, i) => acc += curr * b[i], 0);
 }
