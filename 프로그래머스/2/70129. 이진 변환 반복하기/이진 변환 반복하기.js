@@ -1,15 +1,11 @@
 function solution(s) {
     let temp = s;
-    let cnt = 1;
-    let zero = 0;
+    let [cnt, zero] = [0, 0];
     
-    while(true) {
+    while(temp !== '1') {
         let len = temp.replaceAll(0, '').length;
         zero += temp.length - len;
         temp = len.toString(2);
-        
-        if(temp === '1') break;
-        
         cnt++;
     }
     
